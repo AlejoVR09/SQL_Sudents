@@ -1,10 +1,10 @@
 
 create database myfirstBD;
---use myfirstBD;
+use myfirstBD;
 
 create table profesor(
 
-	id_prof int identity(1,1) not null,
+	id_prof int auto_increment not null,
 	nombre_prof varchar(55) not null,
 	apellido_prof varchar(55) not null,
 	especialidad varchar(55) not null,
@@ -13,7 +13,7 @@ create table profesor(
 );
 
 create table estudiante(
-	id_est int identity(1,1) not null,
+	id_est int auto_increment not null,
 	nombre_est varchar (55) not null,
 	apellido_est varchar(55) not null,
 	email_est varchar(55) not null,
@@ -21,18 +21,18 @@ create table estudiante(
 );
 
 create table curso(
-	id_curso int identity(1,1) not null,
+	id_curso int auto_increment not null,
 	nombre_curso varchar(55) not null,
 	aula varchar(55) not null,
 	constraint pk_curso primary key (id_curso)
 );
 
 
---alter table curso
---drop column profesor;
+-- alter table curso
+-- drop column profesor;
 
 create table matricula(
-	id_matricula int identity(1,1) not null,
+	id_matricula int auto_increment not null,
 	fecha_matricula date not null,
 	fecha_inicio date not null,
 	fecha_fin date not null,
